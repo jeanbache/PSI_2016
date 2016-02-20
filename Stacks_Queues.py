@@ -5,14 +5,15 @@ Created on Sat Feb 20 16:22:48 2016
 @author: jeanbache
 """
 
-#Une classe Pile, une classe File
+# Une classe Pile, une classe File
+# Remarque d'un collegue : pas de majuscule dans les noms de méthodes
 
 class Pile:
     
     def __init__(self):
         self.lst = []
         
-    def is_Empty(self):
+    def is_empty(self):
         return len(self.lst) == 0
         
     def push(self, v):
@@ -33,8 +34,8 @@ class File:
         self.sortie = Pile()
         self.entree = Pile()
         
-    def is_Empty(self):
-        return self.entree.is_Empty() and self.sortie.is_Empty()
+    def is_empty(self):
+        return self.entree.is_empty() and self.sortie.is_empty()
         
     def push(self, v):
         self.entree.push(v)
