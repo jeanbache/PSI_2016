@@ -31,6 +31,10 @@ class Pile:
 class File:
     
     def __init__(self):
+        """ FIFO queue with 2 stacks
+            stack sortie: used to pop
+            stack entree: used to append
+        """
         self.sortie = Pile()
         self.entree = Pile()
         
