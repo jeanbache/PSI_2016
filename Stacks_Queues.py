@@ -46,10 +46,10 @@ class File:
         
     def pop(self):
         """ Precaution: s'assurer que la file n'est pas vide avant"""
-        if self.sortie:
+        if not self.sortie.is_empty:
             self.sortie.pop()
         else:
-            while self.entree:
+            while not self.entree.is_empty:
                 self.sortie.push(self.entree.pop())
             self.sortie.pop()
             
